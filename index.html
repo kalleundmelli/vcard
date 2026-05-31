@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kalle & Melli – Digital contact card</title>
+  <meta name="description" content="Digital contact card for Kalle & Melli." />
+  <meta name="theme-color" content="#499442" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Kalle & Melli" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="preload" as="image" href="assets/profile.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-douala">
+  <div id="loader" class="loader" aria-label="Loading contact card">
+    <div class="loader-backdrop" aria-hidden="true"></div>
+    <div class="loader-card">
+      <img src="assets/profile.png" alt="Kalle & Melli" class="loader-image" />
+      <strong>Kalle & Melli</strong>
+      <p data-i18n="loading">Preparing the contact card …</p>
+      <div class="loader-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <main class="page vcard-widget">
+    <nav class="language-switch" aria-label="Language selection">
+      <button type="button" data-lang="de">DE</button>
+      <button type="button" data-lang="en" class="active">EN</button>
+      <button type="button" data-lang="fr">FR</button>
+    </nav>
+
+    <section class="hero vcard-widget__header" aria-labelledby="title">
+      <img src="assets/profile.png" alt="" class="hero-blur" aria-hidden="true" />
+      <div class="hero-content reveal">
+        <div class="cameroon-brand" aria-label="Cameroon 2026">
+          <span class="cameroon-brand__green">Cameroon</span>
+          <span class="cameroon-brand__gold">2026</span>
+        </div>
+        <img src="assets/profile.png" alt="Kalle & Melli" class="profile-image" width="176" height="176" />
+        <p class="eyebrow" data-i18n="eyebrow">Douala 2026 · June to December</p>
+        <h1 id="title">Kalle & Melli</h1>
+        <p class="subtitle" data-i18n="subtitle">Hello, we are Kalle and Melli from Selters at Bethel.</p>
+      </div>
+    </section>
+
+    <section class="intro-card reveal delay-1 vcard-widget__body">
+      <p data-i18n="intro">We would be happy if you write to us so that we can stay in touch. Warm greetings.</p>
+    </section>
+
+    <section class="actions reveal delay-2" aria-label="Quick actions">
+      <a class="action-button primary vcard-widget__primary" href="contact.vcf" download="Kalle-und-Melli.vcf"><span>📇</span><strong data-i18n="saveContact">Save contact</strong></a>
+      <div class="secondary-actions">
+        <a class="action-button secondary" href="mailto:kalle.und.melli@gmail.com"><span>✉️</span><strong data-i18n="write">Write</strong></a>
+        <a class="action-button secondary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Am%20Steinfels%201%2C%2065618%20Selters%20%28Taunus%29%2C%20Deutschland"><span>📍</span><strong data-i18n="map">Map</strong></a>
+      </div>
+    </section>
+
+    <section class="contact-card reveal delay-3 vcard-widget__body" aria-label="Contact details">
+      <div class="contact-row">
+        <div class="icon" aria-hidden="true">✉️</div>
+        <div><span class="label" data-i18n="emailLabel">Email address</span><a href="mailto:kalle.und.melli@gmail.com">kalle.und.melli@gmail.com</a></div>
+      </div>
+      <div class="divider"></div>
+      <div class="contact-row">
+        <div class="icon" aria-hidden="true">📍</div>
+        <div><span class="label" data-i18n="addressLabel">Address</span><p>Am Steinfels 1<br />65618 Selters (Taunus)<br />Germany</p></div>
+      </div>
+    </section>
+
+    <section class="install-card reveal delay-4 vcard-widget__body" id="installCard">
+      <div><span class="label" data-i18n="installTitle">Add to home screen</span><p data-i18n="installText">This contact card can be saved on your phone like a small app.</p></div>
+      <button id="installButton" type="button" hidden data-i18n="installButton">Add</button>
+    </section>
+
+    <footer><span data-i18n="footer">No cookies. No tracking. Static hosting.</span></footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
